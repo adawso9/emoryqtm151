@@ -100,8 +100,9 @@ Try it yourself!
 -- Make sure to deparate arguments by a semicolon!
 
 
-
-
+INSERT INTO drivers VALUES (5, 'Alana Dawson', 'American', 57);
+INSERT INTO drivers VALUES (6, 'Ishana Ram', 'Greek', 1000000);
+INSERT INTO drivers VALUES (7, 'Mina Toglukdemir', 'Turkish', 94929);
 -- SQLBook: Markup
 # <span style="color:darkblue"> II. Dataset Operations </span>
 
@@ -146,6 +147,7 @@ Aggregate
 -- To compute aggregate statistics use a statistic function,
 -- such as SUM() or AVG() 
 -- The AS is an alias which assigns a name to the aggregate statistic
+-- Capital letter denotes function
 
 SELECT COUNT(*) AS num_rows,
        SUM(victories) AS sum_victories,
@@ -188,7 +190,8 @@ with more than 60 victories
 -- SQLBook: Code
 -- Write your own code!
 
-
+SELECT driver_id, nationality FROM drivers
+WHERE victories > 60 
 
 
 
