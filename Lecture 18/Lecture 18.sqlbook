@@ -35,6 +35,7 @@ United States Congress dataset
 
 Create table from codebook/dictionary
 -- SQLBook: Code
+-- Active: 1679448258779@@127.0.0.1@5432@postgres
 -- We start by deleting the old table
 -- SQL does not allow you to create a table if one already exists
 DROP TABLE IF EXISTS us_congress_members;
@@ -84,6 +85,15 @@ Try it yourself!
 - Create a new table for "bills_subjects"
 -- SQLBook: Code
 # Write your own code
+
+DROP TABLE IF EXISTS bills_subjects; 
+
+CREATE TABLE bills_subjects (
+    "Congress"     int NOT NULL, 
+    bill_number    int, 
+    bill_type      varchar(30),
+    bill_subject   varchar(30)
+);
 
 
 
